@@ -1,0 +1,242 @@
+:root {
+      --bmi-underweight: #3b82f6;
+      --bmi-normal: #22ab5a;
+      --bmi-overweight: #f5a60f;
+      --bmi-obese: #dc3232;
+    }
+    body {
+      background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 50%, #f5f0ff 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    .card-glass {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 1rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    }
+    .hero-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 1rem;
+      background: rgba(99,102,241,0.1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: #6366f1;
+    }
+    .gender-btn {
+      flex: 1;
+      padding: 0.6rem 1rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 0.75rem;
+      background: #fff;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-weight: 600;
+    }
+    .gender-btn:hover { 
+        border-color: #6366f1; 
+    }
+    .gender-btn.active {
+      border-color: #6366f1;
+      background: rgba(99,102,241,0.08);
+      color: #6366f1;
+    }
+    .unit-toggle {
+    display: flex;       
+    background: #f1f5f9;  
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 4px;
+    gap: 4px;
+    font-weight: 600;
+    }
+    .unit-toggle button {
+    flex: 1;     
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;          
+    padding: 0.55rem 1rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    }
+    .unit-toggle button:hover { 
+        border-color: #6366f1; 
+    }
+    .unit-toggle button.active {
+        background: #6366f1;
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(99,102,241,0.3);
+    }
+        #heightMetric .form-range,
+        #weightMetric .form-range,
+        .form-range{
+        flex: 3;
+    }
+    #heightMetric .form-control,
+    #weightMetric .form-control,
+    #age{
+    flex: 1;
+    max-width: 70px;
+    border-radius: 0.5rem;
+    }
+
+    #heightMetric span,
+    #weightMetric span,
+    #ageDisplay{
+    min-width: 20px;
+    font-size: 17px;
+    color: #6c757d; 
+    }
+    label{
+      font-weight: 700;
+    }
+    .btn-calculate {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      width: 100%;
+      font-size: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-calculate:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(99,102,241,0.35);
+      color: #fff;
+    }
+    .btn-reset {
+      background: transparent;
+      border: 2px solid #e2e8f0;
+      font-weight: 600;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      width: 100%;
+      transition: all 0.2s;
+    }
+    .btn-reset:hover { border-color: #cbd5e1; }
+    .result-section {
+      animation: slideUp 0.5s ease-out;
+    }
+    .bmi-big {
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .category-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 2rem;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .info-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 2rem;
+      background: #f1f5f9;
+      font-size: 0.8rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+    .gauge-bar {
+      height: 14px;
+      border-radius: 7px;
+       background: linear-gradient(
+          90deg,
+          #3b82f6  0%,    #3b82f6  28.3%,
+          #22ab5a  28.3%, #22ab5a  50%,
+          #f5a60f  50%,   #f5a60f  66.7%,
+          #dc3232  66.7%, #dc3232  100%
+        );
+      position: relative;
+      overflow: visible;
+    }
+    .gauge-needle {
+      position: absolute;
+      top: 50%;
+      width: 5px;
+      height: 32px;
+      background: #1e293b;
+      border-radius: 3px;
+      transition: left 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform: translateY(-50%, -50%);
+      box-shadow: 0 0 4px rgba(0,0,0,0.4);
+      z-index: 10;
+    }
+    .gauge-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: #94a3b8;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    .gauge-wrapper{
+     position: relative;
+        margin: 1.5rem 0 0.25rem;
+        padding: 12px 0;
+    }
+    .range-bar-container {
+      margin-bottom: 0.5rem;
+    }
+    .range-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    .range-label span:last-child {
+      font-size: 0.9rem;
+   }
+   .range-track {
+        height: 10px;
+        border-radius: 5px;
+        background: #e2e8f0;
+        overflow: hidden;
+      }
+      .range-fill {
+        height: 100%;
+        border-radius: 5px;
+      }
+
+    .range-bar {
+      height: 8px;
+      border-radius: 4px;
+      position: relative;
+    }
+    .tip-card {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 0.75rem;
+      padding: 1rem;
+    }
+    .tip-card.warning {
+      background: #fffbeb;
+      border-color: #fde68a;
+    }
+    .tip-card.danger {
+      background: #fef2f2;
+      border-color: #fecaca;
+    }
+    .tip-card.info {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+    .form-range::-webkit-slider-thumb { background: #6366f1; }
+    .form-range::-moz-range-thumb { background: #6366f1; }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
