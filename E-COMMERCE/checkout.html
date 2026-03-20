@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - RedStore</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="./images/logo.png" alt="Logo" width="130px" />
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+        <a href="cart.html">
+          <img
+            src="./images/cart.png"
+            alt="cart"
+            class="cart-icon"
+            width="30px"
+          />
+        </a>
+        <img
+          src="./images/menu.png"
+          alt="menu"
+          class="menu-icon"
+          onclick="menutoggle()"
+        />
+      </div>
+    </div>
+
+    <!-- STEP PROGRESS -->
+    <div class="checkout-steps" id="stepsBar">
+      <div class="step done" id="step1">
+        <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+        <div class="step-label">Cart</div>
+      </div>
+      <div class="step active" id="step2">
+        <div class="step-circle">2</div>
+        <div class="step-label">Checkout</div>
+      </div>
+      <div class="step" id="step3">
+        <div class="step-circle">3</div>
+        <div class="step-label">Confirm</div>
+      </div>
+    </div>
+
+    <!-- EMPTY CART STATE -->
+    <div class="empty-checkout" id="emptyCheckout" style="display: none">
+      <div class="icon">🛒</div>
+      <h2>Your cart is empty</h2>
+      <p>Add some products before checking out.</p>
+      <a href="product.html">Browse Products</a>
+    </div>
+
+    <!-- CHECKOUT FORM -->
+    <div class="checkout-wrapper" id="checkoutWrapper">
+      <!-- ── LEFT: Forms ── -->
+      <div class="checkout-left">
+        <!-- Delivery Address -->
+        <div class="checkout-card">
+          <h3><i class="fa-solid fa-location-dot"></i> Delivery Address</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" id="firstName" placeholder="Rishitha" />
+              <span class="err-msg">Required</span>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" id="lastName" placeholder="K" />
+              <span class="err-msg">Required</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="email" placeholder="you@email.com" />
+              <span class="err-msg">Valid email required</span>
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" id="phone" placeholder="+91 98765 43210" />
+              <span class="err-msg">Required</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Address Line 1</label>
+              <input type="text" id="addr1" placeholder="Street address" />
+              <span class="err-msg">Required</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>City</label>
+              <input type="text" id="city" placeholder="Hyderabad" />
+              <span class="err-msg">Required</span>
+            </div>
+            <div class="form-group">
+              <label>State</label>
+              <select id="state">
+                <option value="">Select State</option>
+                <option>Telangana</option>
+                <option>Andhra Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Karnataka</option>
+                <option>Tamil Nadu</option>
+                <option>Delhi</option>
+                <option>Gujarat</option>
+                <option>Rajasthan</option>
+                <option>Other</option>
+              </select>
+              <span class="err-msg">Required</span>
+            </div>
+            <div class="form-group">
+              <label>PIN Code</label>
+              <input type="text" id="pin" placeholder="500001" maxlength="6" />
+              <span class="err-msg">6-digit PIN required</span>
+            </div>
+          </div>
+          <label class="checkbox-row">
+            <input type="checkbox" id="saveAddress" checked />
+            Save this address for future orders
+          </label>
+        </div>
+
+        <!-- Payment -->
+        <div class="checkout-card">
+          <h3><i class="fa-solid fa-credit-card"></i> Payment Method</h3>
+
+          <div class="pay-tabs">
+            <div class="pay-tab active" onclick="switchPayTab('card', this)">
+              <i class="fa-regular fa-credit-card"></i> Card
+            </div>
+            <div class="pay-tab" onclick="switchPayTab('upi', this)">
+              <i class="fa-solid fa-mobile-screen"></i> UPI
+            </div>
+            <div class="pay-tab" onclick="switchPayTab('netbanking', this)">
+              <i class="fa-solid fa-building-columns"></i> Net Banking
+            </div>
+            <div class="pay-tab" onclick="switchPayTab('cod', this)">
+              <i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery
+            </div>
+          </div>
+
+          <!-- Card panel -->
+          <div class="pay-panel active" id="panel-card">
+            <div class="form-row">
+              <div class="form-group" style="flex: 2">
+                <label>Card Number</label>
+                <div class="card-input-wrap">
+                  <input
+                    type="text"
+                    id="cardNumber"
+                    placeholder="1234 5678 9012 3456"
+                    maxlength="19"
+                    oninput="formatCardNumber(this)"
+                  />
+                  <span class="card-brand" id="cardBrandIcon"
+                    ><i class="fa-regular fa-credit-card"></i
+                  ></span>
+                </div>
+                <span class="err-msg">16-digit card number required</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Cardholder Name</label>
+                <input type="text" id="cardName" placeholder="Name on card" />
+                <span class="err-msg">Required</span>
+              </div>
+              <div class="form-group">
+                <label>Expiry (MM/YY)</label>
+                <input
+                  type="text"
+                  id="cardExpiry"
+                  placeholder="MM/YY"
+                  maxlength="5"
+                  oninput="formatExpiry(this)"
+                />
+                <span class="err-msg">Required</span>
+              </div>
+              <div class="form-group">
+                <label>CVV</label>
+                <input
+                  type="password"
+                  id="cardCvv"
+                  placeholder="•••"
+                  maxlength="4"
+                />
+                <span class="err-msg">Required</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- UPI panel -->
+          <div class="pay-panel" id="panel-upi">
+            <div class="form-row">
+              <div class="form-group">
+                <label>UPI ID</label>
+                <input type="text" id="upiId" placeholder="yourname@upi" />
+                <span class="err-msg">Valid UPI ID required</span>
+              </div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--muted); margin-top: 4px">
+              <i class="fa-solid fa-circle-info"></i>
+              You'll receive a payment request on your UPI app after placing the
+              order.
+            </p>
+          </div>
+
+          <!-- Net Banking panel -->
+          <div class="pay-panel" id="panel-netbanking">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Select Bank</label>
+                <select id="bankSelect">
+                  <option value="">-- Choose your bank --</option>
+                  <option>State Bank of India</option>
+                  <option>HDFC Bank</option>
+                  <option>ICICI Bank</option>
+                  <option>Axis Bank</option>
+                  <option>Kotak Mahindra Bank</option>
+                  <option>Punjab National Bank</option>
+                  <option>Other</option>
+                </select>
+                <span class="err-msg">Please select a bank</span>
+              </div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--muted); margin-top: 4px">
+              <i class="fa-solid fa-circle-info"></i>
+              You'll be redirected to your bank's portal to complete payment.
+            </p>
+          </div>
+
+          <!-- COD panel -->
+          <div class="pay-panel" id="panel-cod">
+            <div
+              style="
+                background: #f9f9f9;
+                border-radius: 8px;
+                padding: 18px;
+                display: flex;
+                gap: 14px;
+                align-items: flex-start;
+              "
+            >
+              <i
+                class="fa-solid fa-truck"
+                style="color: var(--red); font-size: 1.4rem; margin-top: 2px"
+              ></i>
+              <div>
+                <p style="margin: 0 0 4px; font-weight: 600; font-size: 0.9rem">
+                  Pay when your order arrives
+                </p>
+                <p style="margin: 0; font-size: 0.82rem; color: var(--muted)">
+                  Cash on Delivery is available for orders up to ₹5000. Please
+                  keep exact change ready.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end payment card -->
+      </div>
+      <!-- end checkout-left -->
+
+      <!-- ── RIGHT: Order Summary ── -->
+      <div class="checkout-right">
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+
+          <!-- Items injected by JS -->
+          <div id="orderItemsList"></div>
+
+          <!-- Coupon -->
+          <div class="coupon-row">
+            <input
+              type="text"
+              id="couponInput"
+              placeholder="Coupon code (try RED10)"
+            />
+            <button onclick="applyCoupon()">Apply</button>
+          </div>
+          <div class="coupon-msg" id="couponMsg"></div>
+
+          <hr class="summary-divider" />
+
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <span id="sumSubtotal">$0.00</span>
+          </div>
+          <div
+            class="summary-line"
+            id="discountRow"
+            style="display: none; color: #27ae60"
+          >
+            <span>Discount (10%)</span>
+            <span id="sumDiscount">-$0.00</span>
+          </div>
+          <div class="summary-line">
+            <span>GST (15%)</span>
+            <span id="sumGST">$0.00</span>
+          </div>
+          <div class="summary-line">
+            <span>Shipping</span>
+            <span id="sumShipping">$0.00</span>
+          </div>
+          <hr class="summary-divider" />
+          <div class="summary-line total">
+            <span>Total</span>
+            <span id="sumTotal">$0.00</span>
+          </div>
+
+          <button class="place-order-btn" onclick="placeOrder()">
+            <i
+              class="fa-solid fa-lock"
+              style="margin-right: 8px; font-size: 0.9rem"
+            ></i>
+            Place Order
+          </button>
+          <div class="secure-badge">
+            <i class="fa-solid fa-shield-halved"></i> 100% Secure &amp;
+            Encrypted Payment
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end checkout-wrapper -->
+
+    <!-- ORDER CONFIRMED -->
+    <div class="order-confirmed" id="orderConfirmed">
+      <div class="confirmed-icon"><i class="fa-solid fa-check"></i></div>
+      <h2>Order Placed! 🎉</h2>
+      <p>Thank you for shopping with <strong>RedStore</strong>.</p>
+      <p>
+        Your order ID is
+        <span class="order-id" id="confirmedOrderId">#RS000000</span>
+      </p>
+      <p>
+        A confirmation will be sent to
+        <span id="confirmedEmail" style="font-weight: 600"></span>
+      </p>
+      <p style="margin-top: 10px; font-size: 0.85rem">
+        Estimated delivery: <strong>3–5 business days</strong>
+      </p>
+      <div class="confirmed-actions">
+        <a href="product.html" class="btn-primary-outline">Continue Shopping</a>
+        <a href="index.html" class="btn-primary-filled">Go to Home</a>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download app for Android and ios mobile phone.</p>
+            <div class="app-logo">
+              <img src="./images/play-store.png" alt="img" />
+              <img src="./images/app-store.png" alt="img" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="./images/logo-white.png" alt="logo" />
+            <p>
+              Our Purpose Is to Sustainably Make the Pleasures and Benefits of
+              Sports Accessbile to the Many.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Link</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliates</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+              <a href="https://www.facebook.com/"><li>Facebook</li></a>
+              <a href="https://www.instagram.com/"><li>Instagram</li></a>
+              <a href="https://x.com/?lang=en"><li>Twitter</li></a>
+              <a href="https://www.youtube.com/"><li>YouTube</li></a>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="Copyright">Copyright 2026</p>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

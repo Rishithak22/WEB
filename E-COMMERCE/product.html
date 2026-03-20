@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Products - RedStore</title>
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="./images/logo.png" alt="Logo" width="130px" />
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+        <a href="cart.html"
+          ><img
+            src="./images/cart.png"
+            alt="cart"
+            class="cart-icon"
+            width="30p"
+        /></a>
+        <img
+          src="./images/menu.png"
+          alt="menu"
+          class="menu-icon"
+          onclick="menutoggle()"
+        />
+      </div>
+    </div>
+
+    <div class="small-container">
+      <div class="row row-2">
+        <h2>All Products</h2>
+        <select>
+          <option>Default Sort</option>
+          <option>Sort by Price</option>
+          <option>Sort by Popularity</option>
+          <option>Sort by Ratings</option>
+          <option>Sort by Discount</option>
+        </select>
+      </div>
+      <div class="row" id="productGrid">
+        <div class="col-4">
+          <a href="product-detail.html?id=1"
+            ><img src="./images/product-1.jpg" alt="product-1"
+          /></a>
+          <h4>Red Printed T-Shirt</h4>
+          <div class="rating">
+            <i class="fa-solid fa-star" style="color: #ff523b"></i>
+            <i class="fa-solid fa-star" style="color: #ff523b"></i>
+            <i class="fa-solid fa-star" style="color: #ff523b"></i>
+            <i class="fa-solid fa-star" style="color: #ff523b"></i>
+            <i class="fa-regular fa-star" style="color: #ff523b"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+        <div class="col-4">
+          <a href="product-detail.html?id=2">
+            <img src="./images/product-2.jpg" alt="product-2" />
+            <h4>Men Shoes by HRX</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i
+                class="fa-regular fa-star-half-stroke"
+                style="color: #ff523b"
+              ></i>
+            </div>
+            <p>$90.00</p>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="product-detail.html?id=3">
+            <img src="./images/product-3.jpg" alt="product-3" />
+            <h4>Track Pant</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-regular fa-star" style="color: #ff523b"></i>
+            </div>
+            <p>$50.00</p>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="product-detail.html?id=4">
+            <img src="./images/product-4.jpg" alt="product-4" />
+            <h4>Blue Puma T-Shirt</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i
+                class="fa-regular fa-star-half-stroke"
+                style="color: #ff523b"
+              ></i>
+            </div>
+            <p>$100.00</p>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <a href="product-detail.html?id=5">
+            <img src="./images/product-5.jpg" alt="product-5" />
+            <h4>Causal Shoes</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-regular fa-star" style="color: #ff523b"></i>
+            </div>
+            <p>$80.00</p>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="product-detail.html?id=6">
+            <img src="./images/product-6.jpg" alt="product-6" />
+            <h4>Black Puma T-Shirt</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i
+                class="fa-regular fa-star-half-stroke"
+                style="color: #ff523b"
+              ></i>
+            </div>
+            <p>$70.00</p>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="product-detail.html?id=7">
+            <img src="./images/product-7.jpg" alt="product-7" />
+            <h4>Socks by HRX</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-regular fa-star" style="color: #ff523b"></i>
+            </div>
+            <p>$150.00</p>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="product-detail.html?id=8">
+            <img src="./images/product-8.jpg" alt="product-8" />
+            <h4>Mens Watch By Fossil</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i
+                class="fa-regular fa-star-half-stroke"
+                style="color: #ff523b"
+              ></i>
+            </div>
+            <p>$180.00</p>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <a href="product-detail.html?id=9">
+            <img src="./images/product-9.jpg" alt="product-9" />
+            <h4>Mens Watch by Roadster</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-regular fa-star" style="color: #ff523b"></i>
+            </div>
+            <p>$150.00</p>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="product-detail.html?id=10">
+            <img src="./images/product-10.jpg" alt="product-10" />
+            <h4>Shoes by HRX</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i
+                class="fa-regular fa-star-half-stroke"
+                style="color: #ff523b"
+              ></i>
+            </div>
+            <p>$90.00</p>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="product-detail.html?id=11">
+            <img src="./images/product-11.jpg" alt="product-11" />
+            <h4>Shoes by Roadster</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-regular fa-star" style="color: #ff523b"></i>
+            </div>
+            <p>$150.00</p>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="product-detail.html?id=12">
+            <img src="./images/product-12.jpg" alt="product-12" />
+            <h4>Track pant by Nike</h4>
+            <div class="rating">
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i class="fa-solid fa-star" style="color: #ff523b"></i>
+              <i
+                class="fa-regular fa-star-half-stroke"
+                style="color: #ff523b"
+              ></i>
+            </div>
+            <p>$80.00</p>
+          </a>
+        </div>
+      </div>
+      <div class="page-btn">
+        <a href="product.html"><span>1</span></a>
+        <a href="product.html"><span>2</span></a>
+        <a href="product.html"><span>3</span></a>
+        <a href="product.html"><span>4 &#8594;</span></a>
+      </div>
+    </div>
+
+    <!-- --------------- Footer --------------- -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download app for Android and ios mobile phone.</p>
+            <div class="app-logo">
+              <img src="./Images/play-store.png" alt="img" />
+              <img src="./Images/app-store.png" alt="img" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="./Images/logo-white.png" alt="logo" />
+            <p>
+              Our Purpose Is to Sustainably Make the Pleasures and Benefits of
+              Sports Accessbile to the Many.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Link</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliates</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+              <a href="https://www.facebook.com/"><li>Facebook</li></a>
+              <a href="https://www.instagram.com/"><li>Instagram</li></a>
+              <a href="https://x.com/?lang=en"><li>Twitter</li></a>
+              <a href="https://www.youtube.com/"><li>YouTube</li></a>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="Copyright">Copyright 2026</p>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

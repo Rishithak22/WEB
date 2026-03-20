@@ -1,0 +1,117 @@
+/* ══════════════════════════════════════════
+   responsive.css — RedStore
+   Breakpoints: 800px | 768px | 600px
+   ══════════════════════════════════════════ */
+
+/* ── 800px: Mobile nav ── */
+@media (max-width: 800px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #333;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 50px;
+  }
+  nav ul li a {
+    color: #fff;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* ── 768px: Tablet layout ── */
+@media (max-width: 768px) {
+
+  /* Cart page */
+  .cart-product-cell {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cart-summary {
+    width: 100%;
+  }
+
+  /* Checkout page */
+  .checkout-right {
+    width: 100%;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .pay-tabs {
+    flex-wrap: wrap;
+  }
+
+  /* About page */
+  .about-mission {
+    flex-direction: column;
+  }
+  .about-mission img {
+    width: 100%;
+  }
+  .timeline::before {
+    left: 16px;
+  }
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 50px;
+    padding-right: 0;
+  }
+  .timeline-dot {
+    left: 16px;
+  }
+}
+
+/* ── 600px: Small mobile ── */
+@media (max-width: 600px) {
+
+  /* General layout */
+  .row {
+    text-align: center;
+  }
+  .col-2,
+  .col-3,
+  .col-4 {
+    flex-basis: 100%;
+  }
+
+  /* Product detail overrides */
+  .single-product .row {
+    text-align: left;
+  }
+  .single-product .col-2 {
+    padding: 20px 0;
+  }
+  .single-product h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  /* About page */
+  .values-grid,
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-stats {
+    flex-direction: column;
+    text-align: center;
+  }
+  .confirmed-actions {
+    flex-direction: column;
+  }
+  .confirmed-actions a {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Products - RedStore</title>
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="./images/logo.png" alt="Logo" width="130px" />
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+        <a href="cart.html"
+          ><img
+            src="./Images/cart.png"
+            alt="cart"
+            class="cart-icon"
+            width="30p"
+        /></a>
+        <img
+          src="./Images/menu.png"
+          alt="menu"
+          class="menu-icon"
+          onclick="menutoggle()"
+        />
+      </div>
+    </div>
+
+    <!-- Product detail injected here by main.js -->
+    <div id="productDetailRoot"></div>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- --------------- Footer --------------- -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download app for Android and ios mobile phone.</p>
+            <div class="app-logo">
+              <img src="./images/play-store.png" alt="img" />
+              <img src="./images/app-store.png" alt="img" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="./images/logo-white.png" alt="logo" />
+            <p>
+              Our Purpose Is to Sustainably Make the Pleasures and Benefits of
+              Sports Accessbile to the Many.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Link</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliates</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+              <a href="https://www.facebook.com/"><li>Facebook</li></a>
+              <a href="https://www.instagram.com/"><li>Instagram</li></a>
+              <a href="https://x.com/?lang=en"><li>Twitter</li></a>
+              <a href="https://www.youtube.com/"><li>YouTube</li></a>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="Copyright">Copyright 2024</p>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
