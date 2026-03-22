@@ -58,8 +58,8 @@ This portfolio was created to:
 If you'd like to connect or collaborate:
 
 * 📧 Email: *[rishithak399@gmail.com](mailto:rishithak399@gmail.com)*
-* 💼 LinkedIn: [*your-linkedin-link*](https://www.linkedin.com/in/rishitha-k-40a443277/)
-* 🐙 GitHub: [https://github.com/rishithak22](https://github.com/rishithak22)
+* 💼 LinkedIn: [*linkedin-link*](https://www.linkedin.com/in/rishitha-k-40a443277/)
+* 🐙 GitHub: [*GitHub-Link*](https://github.com/rishithak22)
 
 
 ## ⭐ Feedback & Suggestions
