@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Rishitha K</title>
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="./responsive.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <a href="index.html" class="nav-logo">RK<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li>
+          <a href="projects.html" style="color: var(--accent)">Projects</a>
+        </li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="projects-hero">
+      <div class="hero-grid"></div>
+      <a href="index.html" class="back-btn">← Back to Home</a>
+      <p class="s-label">My Work</p>
+      <h1 class="page-title">All Projects</h1>
+      <p class="page-sub">
+        A collection of everything I've built — from real-world web apps to fun
+        side projects and experiments.
+      </p>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="html-css">HTML / CSS</button>
+      <button class="filter-btn" data-filter="javascript">JavaScript</button>
+      <button class="filter-btn" data-filter="bootstrap">Bootstrap</button>
+      <button class="filter-btn" data-filter="java">Java</button>
+    </div>
+
+    <!-- ALL PROJECTS GRID -->
+    <section class="all-projects-section">
+      <p class="projects-count">
+        Showing <span id="visibleCount">6</span> of
+        <span id="totalCount">6</span> projects
+      </p>
+      <div class="all-projects-grid" id="projectsGrid">
+        <!-- 1 -->
+        <div class="proj-card reveal" data-tags="html-css javascript bootstrap">
+          <div class="proj-thumb pt1" style="position: relative">
+            <span class="proj-category">E-Commerce</span>
+            🌿
+            <div class="proj-overlay">
+              <a
+                href="https://rishithak22.github.io/My-Projects/Organic%20Plazza/index.html?"
+                class="o-btn"
+                >Live Demo</a
+              >
+              <a
+                href="https://rishithak22.github.io/My-Projects/Organic%20Plazza/index.html?"
+                target="_blank"
+                class="o-btn ghost"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="ptag">HTML</span><span class="ptag">CSS</span
+              ><span class="ptag">JS</span><span class="ptag">Bootstrap</span>
+            </div>
+            <div class="proj-name">Organic Plaza</div>
+            <div class="proj-desc">
+              A user-friendly e-commerce interface for organic products
+              including food and personal care items. Fully responsive with
+              intuitive navigation and extensive product catalog.
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="proj-card reveal d1" data-tags="html-css javascript">
+          <div class="proj-thumb pt2" style="position: relative">
+            <span class="proj-category">Game</span>
+            🎮
+            <div class="proj-overlay">
+              <a
+                href="https://rishithak22.github.io/JTD/2048/INDEX.HTML"
+                class="o-btn"
+                >Live Demo</a
+              >
+              <a
+                href="https://rishithak22.github.io/JTD/2048/INDEX.HTML"
+                target="_blank"
+                class="o-btn ghost"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="ptag">HTML</span><span class="ptag">CSS</span
+              ><span class="ptag">JavaScript</span>
+            </div>
+            <div class="proj-name">2048 Game</div>
+            <div class="proj-desc">
+              A responsive 4×4 game board built with CSS Grid layout. Dynamic
+              tile generation and smooth movement controlled by JavaScript for a
+              fun gaming experience.
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="proj-card reveal d2" data-tags="html-css javascript">
+          <div class="proj-thumb pt3" style="position: relative">
+            <span class="proj-category">E-Commerce</span>
+            🛒
+            <div class="proj-overlay">
+              <a
+                href="https://rishithak22.github.io/E-COMMERCE/index.html"
+                class="o-btn"
+                >Live Demo</a
+              >
+              <a
+                href="https://rishithak22.github.io/E-COMMERCE/index.html"
+                target="_blank"
+                class="o-btn ghost"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="ptag">HTML</span><span class="ptag">CSS</span
+              ><span class="ptag">JS</span>
+            </div>
+            <div class="proj-name">RedStore</div>
+            <div class="proj-desc">
+              A responsive e-commerce website with product listings, intuitive
+              navigation, and interactive UI features. Built with clean,
+              maintainable front-end code.
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 — ADD YOUR PROJECT HERE -->
+        <div class="proj-card reveal" data-tags="html-css bootstrap">
+          <div class="proj-thumb pt4" style="position: relative">
+            <span class="proj-category">Web App</span>
+            🧮
+            <div class="proj-overlay">
+              <a
+                href="https://rishithak22.github.io/WEB/BMI/index.html"
+                class="o-btn"
+                >Live Demo</a
+              >
+              <a
+                href="https://rishithak22.github.io/WEB/BMI/index.html"
+                target="_blank"
+                class="o-btn ghost"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="ptag">HTML</span><span class="ptag">CSS</span
+              ><span class="ptag">Js</span><span class="ptag">Bootstrap</span>
+            </div>
+            <div class="proj-name">BMI Calculator</div>
+            <div class="proj-desc">
+              A simple and responsive BMI (Body Mass Index) Calculator built
+              using HTML, CSS, Bootstrap, and JavaScript. This web app allows
+              users to calculate their BMI by entering their height and weight,
+              and it instantly displays the BMI value along with the health
+              category.
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 — ADD YOUR PROJECT HERE -->
+        <div class="proj-card reveal d1" data-tags="javascript">
+          <div class="proj-thumb pt5" style="position: relative">
+            <span class="proj-category">App</span>
+            💡
+            <div class="proj-overlay">
+              <a
+                href="https://rishithak22.github.io/JTD/Quiz/index.html"
+                class="o-btn"
+                >Live Demo</a
+              >
+              <a
+                href="https://rishithak22.github.io/JTD/Quiz/index.html"
+                target="_blank"
+                class="o-btn ghost"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="ptag">HTML</span><span class="ptag">CSS</span
+              ><span class="ptag">JavaScript</span>
+            </div>
+            <div class="proj-name">Quiz App</div>
+            <div class="proj-desc">
+              This is a simple web-based quiz application built using HTML, CSS,
+              and JavaScript. It allows users to answer a series of questions
+              and displays the final score at the end.
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 — ADD YOUR PROJECT HERE -->
+        <div
+          class="proj-card reveal d2"
+          data-tags="html-css javascript bootstrap"
+        >
+          <div class="proj-thumb pt6" style="position: relative">
+            <span class="proj-category">UI / UX</span>
+            🎨
+            <div class="proj-overlay">
+              <a
+                href="https://rishithak22.github.io/My-Projects/Foodies/"
+                class="o-btn"
+                >Live Demo</a
+              >
+              <a
+                href="https://rishithak22.github.io/My-Projects/Foodies/"
+                target="_blank"
+                class="o-btn ghost"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="ptag">HTML</span><span class="ptag">CSS</span
+              ><span class="ptag">JavaScript</span>
+            </div>
+            <div class="proj-name">Foodies</div>
+            <div class="proj-desc">
+              Foodies is a platform where you can find various recipes, food
+              blogs, restaurant reviews, and much more. Whether you are a
+              professional chef or a home cook, you'll find something
+              interesting here.
+            </div>
+          </div>
+        </div>
+
+      <!-- /all-projects-grid -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="f-logo">Rishitha K.</div>
+      <p class="f-copy">
+        © 2026 Rishitha Kanthreegala. Designed & Built with ♥
+      </p>
+      <div class="f-socials">
+        <a href="https://github.com/Rishithak22" target="_blank" class="soc"
+          ><i class="fa-brands fa-github" style="color: rgb(99, 230, 190)"></i
+        ></a>
+        <a
+          href="https://linkedin.com/in/rishitha-k-40a443277"
+          target="_blank"
+          class="soc"
+          ><i
+            class="fa-brands fa-linkedin-in"
+            style="color: rgb(99, 230, 190)"
+          ></i
+        ></a>
+        <a href="mailto:rishithak399@gmail.com" class="soc"
+          ><i
+            class="fa-regular fa-envelope"
+            style="color: rgb(99, 230, 190)"
+          ></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      /* ── Filter logic ── */
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const cards = document.querySelectorAll("#projectsGrid .proj-card");
+      const countEl = document.getElementById("visibleCount");
+      const totalEl = document.getElementById("totalCount");
+
+      totalEl.textContent = cards.length;
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          let visible = 0;
+          cards.forEach((card) => {
+            const tags = card.dataset.tags || "";
+            const show = filter === "all" || tags.includes(filter);
+            card.classList.toggle("hidden", !show);
+            if (show) visible++;
+          });
+
+          countEl.textContent = visible;
+        });
+      });
+    </script>
+  </body>
+</html>

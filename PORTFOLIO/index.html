@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rishitha K | Portfolio</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="./responsive.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">RK<span>.</span></a>
+      <ul class="nav-links" id="nav-link">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+    <!-- Hero -->
+
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="shape1"></div>
+      <div class="shape2"></div>
+      <div class="hero-content">
+        <div class="hero-tag">✦ Open to opportunities</div>
+        <h1 class="hero-name">
+          Rishitha<br /><span class="outline">Kanthreegala.</span>
+        </h1>
+        <p class="hero-role">
+          &lt; <span class="typed" id="typedEl"></span
+          ><span class="cb">|</span>/&gt;
+        </p>
+        <p class="hero-desc">
+          A passionate Software developer and MCA Student from Madanapalle,
+          India.I enjoy transforming ideas into interactive digital solutions,
+          which is why I developed a strong interest in web development and
+          programming.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-p">View My Work →</a>
+          <a href="#contact" class="btn-s">Get In Touch</a>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <div class="scroll-line"></div>
+        Scroll down
+      </div>
+    </section>
+
+    <!-- About -->
+
+    <section id="about">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="avatar-box"><div class="initials">RK</div></div>
+          <div class="deco1"></div>
+          <div class="deco2"></div>
+        </div>
+        <div class="about-text">
+          <p class="s-label reveal">About Me</p>
+          <h2 class="s-title reveal">Building the web, one pixel at a time</h2>
+          <div class="s-line reveal"></div>
+          <p class="reveal">
+            Hi! I'm <strong style="color: var(--accent)">Rishitha</strong>,a
+            passionate Software Developer and MCA Student from Madanapalle,
+            Andhra Pradesh. I'm enthusiastic about creating clean, responsive,
+            and intuitive web interfaces.
+          </p>
+          <p class="reveal d1">
+            My journey spans from building organic food platforms to fun games
+            like 2048, always focussing on delivering a smooth user experience.
+            I'm skilled in Java, HTML, CSS, JavaScript, Bootstarp, SQl, Git and
+            Github
+          </p>
+          <p class="reveal d2">
+            I participated in the National level financial Literacy Quiz in
+            2024, denmonstrating my enthusiasm for continuous learning beyond
+            the classroom.
+          </p>
+          <div class="about-stats reveal d3">
+            <div class="stat">
+              <span class="stat-num" data-target="6">6+</span
+              ><span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="1">1+</span
+              ><span class="stat-label">Internship</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="4">4+</span
+              ><span class="stat-label">Tech Skills</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <p class="s-label reveal">What I Know</p>
+      <h2 class="s-title reveal">Skills & Technologies</h2>
+      <div class="s-line reveal"></div>
+      <div class="skills-grid">
+        <div class="skill-card reveal" data-fill="88">
+          <div class="s-icon">🌐</div>
+          <div class="s-name">HTML & CSS</div>
+          <div class="s-tags">
+            <span class="s-tag">HTML5</span><span class="s-tag">CSS3</span
+            ><span class="s-tag">Flexbox</span><span class="s-tag">Grid</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+            <div class="bar-pct">88%</div>
+          </div>
+          <div class="skill-card reveal d1" data-fill="80">
+            <div class="s-icon">⚡</div>
+            <div class="s-name">JavaScaript</div>
+            <div class="s-tags">
+              <span class="s-tag">ES6+</span><span class="s-tag">DOM</span
+              ><span class="s-tag">Events</span><span class="s-tag">APIs</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill"></div></div>
+            <div class="bar-pct">80%</div>
+          </div>
+          <div class="skill-card reveal d2" data-fill="85">
+            <div class="s-icon">📱</div>
+            <div class="s-name">Bootstrap</div>
+            <div class="s-tags">
+              <span class="s-tag">Responsive</span
+              ><span class="s-tag">Components</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill"></div></div>
+            <div class="bar-pct">85%</div>
+          </div>
+          <div class="skill-card reveal" data-fill="75">
+            <div class="s-icon">☕</div>
+            <div class="s-name">Java</div>
+            <div class="s-tags">
+              <span class="s-tag">OOP</span>
+              <span class="s-tag">Logic Building</span
+              ><span class="s-tag">Problem Solving</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill"></div></div>
+            <div class="bar-pct">75%</div>
+          </div>
+          <div class="skill-card reveal" data-fill="90">
+            <div class="s-icon">🗄️</div>
+            <div class="s-name">DataBase</div>
+            <div class="s-tags">
+              <span class="s-tag">SQL</span> <span class="s-tag">MySQL</span
+              ><span class="s-tag">Quires</span><span class="s-tag">Joins</span>
+              <span class="s-tag">Schema Design</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill"></div></div>
+            <div class="bar-pct">90%</div>
+          </div>
+          <div class="skill-card reveal" data-fill="85">
+            <div class="s-icon">🔧</div>
+            <div class="s-name">Git & GitHub</div>
+            <div class="s-tags">
+              <span class="s-tag">Version Control</span>
+              <span class="s-tag">Branching</span
+              ><span class="s-tag">Collobaration</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill"></div></div>
+            <div class="bar-pct">85%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <p class="s-label reveal">My Work</p>
+      <h2 class="s-title reveal">Featured Projects</h2>
+      <div class="s-line reveal"></div>
+      <div class="projects-grid">
+        <div class="proj-card reveal">
+          <div class="proj-thumb pt1">
+            🌿
+            <div class="proj-overlay">
+              <a href="#" class="o-btn">Live Demo</a>
+              <a
+                href="https://github.com/Rishithak22"
+                target="_blank"
+                class="o-btn ghost"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="ptag">HTML</span><span class="ptag">CSS</span
+              ><span class="ptag">JS</span><span class="ptag">Bootstrap</span>
+            </div>
+            <div class="proj-name">Organic Plaza</div>
+            <div class="proj-desc">
+              A user-friendly e-commerce interface for organic products
+              including food and personal care items. Fully responsive with
+              intuitive navigation and extensive product catalog.
+            </div>
+          </div>
+        </div>
+        <div class="proj-card reveal d1">
+          <div class="proj-thumb pt2">
+            🎮
+            <div class="proj-overlay">
+              <a href="#" class="o-btn">Live Demo</a>
+              <a
+                href="https://github.com/Rishithak22"
+                target="_blank"
+                class="o-btn ghost"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="ptag">HTML</span><span class="ptag">CSS</span
+              ><span class="ptag">JavaScript</span>
+            </div>
+            <div class="proj-name">2048 Game</div>
+            <div class="proj-desc">
+              A responsive 4×4 game board built with CSS Grid layout. Dynamic
+              tile generation and movement are controlled by JavaScript for a
+              smooth gaming experience.
+            </div>
+          </div>
+        </div>
+        <div class="proj-card reveal d2">
+          <div class="proj-thumb pt3">
+            🛒
+            <div class="proj-overlay">
+              <a href="#" class="o-btn">Live Demo</a>
+              <a
+                href="https://github.com/Rishithak22"
+                target="_blank"
+                class="o-btn ghost"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="ptag">HTML</span><span class="ptag">CSS</span
+              ><span class="ptag">JS</span>
+            </div>
+            <div class="proj-name">RedStore — E-Commerce</div>
+            <div class="proj-desc">
+              A responsive e-commerce website with product listings, intuitive
+              navigation, and interactive UI features. Built with clean,
+              maintainable front-end code.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects-more reveal">
+        <a href="projects.html" class="btn-all-projects">View All Projects →</a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <p class="s-label reveal">Work History</p>
+      <h2 class="s-title reveal">Experience</h2>
+      <div class="s-line reveal"></div>
+      <div class="exp-list">
+        <div class="exp-card reveal">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Front-end Developer Intern</div>
+              <div class="exp-company">Skillcraft Technology</div>
+            </div>
+            <div class="exp-date">August 2024</div>
+          </div>
+          <ul class="exp-points">
+            <li>
+              Developed and maintained responsive websites using HTML, CSS,
+              JavaScript, and Bootstrap framework.
+            </li>
+            <li>
+              Gained hands-on experience with version control tools like Git and
+              GitHub for collaborative development.
+            </li>
+            <li>
+              Worked on real-world front-end projects, improving skills in
+              responsive design and cross-browser compatibility.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <p class="s-label reveal">Academic Background</p>
+      <h2 class="s-title reveal">Education</h2>
+      <div class="s-line reveal"></div>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-degree">Master of Computer Applications</div>
+          <div class="edu-school">MITS Deemed to be University</div>
+          <div class="edu-year">Madanapalle, AP — (Pursuing)</div>
+        </div>
+        <div class="edu-card reveal d1">
+          <div class="edu-icon">💻</div>
+          <div class="edu-degree">Bachelor of Computer Applications</div>
+          <div class="edu-school">Shri Gnanambica Degree College</div>
+          <div class="edu-year">Madanapalle, AP — (2022–2025)</div>
+        </div>
+        <div class="edu-card reveal d2">
+          <div class="edu-icon">📖</div>
+          <div class="edu-degree">Bi.P.C — Intermediate</div>
+          <div class="edu-school">Sri Chaitanya Junior College</div>
+          <div class="edu-year">Madanapalle, AP — (2019–2021)</div>
+        </div>
+        <div class="edu-card reveal d3">
+          <div class="edu-icon">🏫</div>
+          <div class="edu-degree">SSC — Secondary School</div>
+          <div class="edu-school">Nethaji E.M High School</div>
+          <div class="edu-year">Madanapalle, AP — (2018–2019)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <p class="s-label reveal">Say Hello</p>
+      <h2 class="s-title reveal">Let's Connect</h2>
+      <div class="s-line reveal"></div>
+      <div class="contact-wrap">
+        <div class="contact-info reveal">
+          <p>
+            I'm actively looking for internship and job opportunities. If you
+            have a project, opportunity, or just want to chat — I'd love to hear
+            from you!
+          </p>
+          <div class="c-links">
+            <a href="mailto:rishithak399@gmail.com" class="c-link"
+              ><span class="c-icon"><i class="fa-regular fa-envelope" style="color: rgb(99, 230, 190);"></i></span>rishithak399@gmail.com</a
+            >
+            <a href="tel:+916281424966" class="c-link"
+              ><span class="c-icon"><i class="fa-solid fa-phone" style="color: rgb(99, 230, 190);"></i></span>+91 6281424966</a
+            >
+            <a
+              href="https://linkedin.com/in/rishitha-k-40a443277"
+              target="_blank"
+              class="c-link"
+              ><span class="c-icon"><i class="fa-brands fa-linkedin-in" style="color: rgb(99, 230, 190);"></i></span
+              >linkedin.com/in/rishitha-k-40a443277</a
+            >
+            <a
+              href="https://github.com/Rishithak22"
+              target="_blank"
+              class="c-link"
+              ><span class="c-icon"><i class="fa-brands fa-github" style="color: rgb(99, 230, 190);"></i></span>github.com/Rishithak22</a
+            >
+            <a class="c-link" style="pointer-events: none"
+              ><span class="c-icon"><i class="fa-solid fa-location-crosshairs" style="color: rgb(99, 230, 190);"></i></span>Madanapalle, Andhra Pradesh,
+              India</a
+            >
+          </div>
+        </div>
+        <form class="contact-form reveal d1" onsubmit="handleSubmit(event)">
+          <div class="f-group">
+            <label class="f-label">Your Name</label
+            ><input
+              class="f-input"
+              type="text"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+          <div class="f-group">
+            <label class="f-label">Email Address</label
+            ><input
+              class="f-input"
+              type="email"
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+          <div class="f-group">
+            <label class="f-label">Subject</label
+            ><input
+              class="f-input"
+              type="text"
+              placeholder="Internship / Collaboration / etc."
+            />
+          </div>
+          <div class="f-group">
+            <label class="f-label">Message</label
+            ><textarea
+              class="f-textarea"
+              placeholder="Tell me about the opportunity or project..."
+            ></textarea>
+          </div>
+          <button class="f-submit" type="submit">Send Message →</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="f-logo">Rishitha K.</div>
+      <p class="f-copy">
+        © 2026 Rishitha Kanthreegala. Designed & Built with ♥
+      </p>
+      <div class="f-socials">
+        <a href="https://github.com/Rishithak22" target="_blank" class="soc"
+          ><i class="fa-brands fa-github" style="color: rgb(99, 230, 190);"></i></a
+        >
+        <a
+          href="https://linkedin.com/in/rishitha-k-40a443277"
+          target="_blank"
+          class="soc"
+          ><i class="fa-brands fa-linkedin-in" style="color: rgb(99, 230, 190);"></i></a
+        >
+        <a href="mailto:rishithak399@gmail.com" class="soc"><i class="fa-regular fa-envelope" style="color: rgb(99, 230, 190);"></i></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
